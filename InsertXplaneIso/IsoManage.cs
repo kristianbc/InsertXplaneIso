@@ -145,7 +145,7 @@ namespace InsertXplaneIso
         public static void AddToRegistryStartup()
         {
             string appName = Assembly.GetExecutingAssembly().GetName().Name;
-            string exePath = Assembly.GetExecutingAssembly().Location;
+            string exePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, appName + ".exe");
 
             try
             {
